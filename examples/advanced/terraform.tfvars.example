@@ -1,0 +1,128 @@
+# Example terraform.tfvars file for Advanced Virtual WAN
+# Copy this file to terraform.tfvars and modify the values as needed
+
+# Basic Configuration
+resource_group_name = "rg-vwan-advanced"
+location            = "East US"
+environment         = "Production"
+
+# VPN Shared Keys (replace with your actual keys)
+vpn_shared_keys = {
+  "branch-office-1" = "YourSecureSharedKey123!"
+  "branch-office-2" = "YourSecureSharedKey456!"
+}
+
+# ExpressRoute Configuration (uncomment and fill in if using ExpressRoute)
+# expressroute_circuit_peering_id = "/subscriptions/your-subscription-id/resourceGroups/your-rg/providers/Microsoft.Network/expressRouteCircuits/your-circuit/peerings/AzurePrivatePeering"
+# expressroute_auth_key = "your-expressroute-authorization-key"
+
+# Virtual Network IDs (uncomment and fill in if connecting existing VNets)
+# vnet_app_id = "/subscriptions/your-subscription-id/resourceGroups/your-rg/providers/Microsoft.Network/virtualNetworks/vnet-app"
+# vnet_data_id = "/subscriptions/your-subscription-id/resourceGroups/your-rg/providers/Microsoft.Network/virtualNetworks/vnet-data"
+
+# Client Root Certificates for P2S VPN (replace with actual certificates)
+client_root_certificates = [
+  {
+    name             = "root-cert-1"
+    public_cert_data = "MIIC5zCCAc+gAwIBAgIQ..." # Replace with actual certificate data
+  }
+]
+
+# Azure AD Authentication (uncomment and fill in if using Azure AD)
+# azure_ad_authentication = [
+#   {
+#     audience = "https://login.microsoftonline.com/your-tenant-id"
+#     issuer   = "https://sts.windows.net/your-tenant-id/"
+#     tenant   = "your-tenant-id"
+#   }
+# ]
+
+# Gateway Configuration
+enable_all_gateways = true
+enable_security_features = true
+
+vpn_gateway_scale_unit = 2
+expressroute_gateway_scale_units = 2
+p2s_vpn_gateway_scale_unit = 1
+
+# Network Configuration
+vpn_client_address_pool = "172.16.100.0/24"
+virtual_hub_address_prefix = "10.0.0.0/24"
+
+# VPN Sites Configuration
+vpn_sites = {
+  "branch-office-1" = {
+    name               = "branch-office-1"
+    address_cidrs      = ["192.168.1.0/24"]
+    device_model       = "Cisco ASA"
+    device_vendor      = "Cisco"
+    link_speed_in_mbps = 100
+    links = [
+      {
+        name       = "primary-link"
+        ip_address = "203.0.113.1"
+        bgp_enabled = false
+      }
+    ]
+  }
+  "branch-office-2" = {
+    name               = "branch-office-2"
+    address_cidrs      = ["192.168.2.0/24"]
+    device_model       = "Fortinet FortiGate"
+    device_vendor      = "Fortinet"
+    link_speed_in_mbps = 50
+    links = [
+      {
+        name       = "primary-link"
+        ip_address = "203.0.113.2"
+        bgp_enabled = false
+      }
+    ]
+  }
+}
+
+# Network Security Group Rules
+nsg_rules = [
+  {
+    name                       = "AllowVPNTraffic"
+    priority                   = 100
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Udp"
+    source_port_range          = "*"
+    destination_port_range     = "500"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  },
+  {
+    name                       = "AllowVPNTraffic2"
+    priority                   = 101
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Udp"
+    source_port_range          = "*"
+    destination_port_range     = "4500"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  },
+  {
+    name                       = "AllowHTTPS"
+    priority                   = 102
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "443"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+]
+
+# Common Tags
+common_tags = {
+  Environment = "Production"
+  Project     = "Virtual-WAN-Advanced"
+  CostCenter  = "IT-001"
+  Owner       = "Network-Team"
+  ManagedBy   = "Terraform"
+} 
