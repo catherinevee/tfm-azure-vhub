@@ -18,6 +18,15 @@ This Terraform module creates a comprehensive Azure Virtual WAN architecture wit
 - 📊 **Comprehensive Outputs**: Detailed outputs for integration with other modules
 - 🏷️ **Tagging Support**: Consistent resource tagging for cost management
 - ✅ **Validation**: Input validation to prevent configuration errors
+- 📋 **Resource Map**: Comprehensive documentation of all created resources
+
+## Documentation
+
+- [**Resource Map**](RESOURCE_MAP.md) - Detailed overview of all Azure resources, their relationships, and dependencies
+- [**Examples**](examples/) - Working examples for different deployment scenarios
+- [**Tests**](tests/) - Comprehensive test suite for module validation
+- [**Contributing**](CONTRIBUTING.md) - Guidelines for contributing to the module
+- [**Changelog**](CHANGELOG.md) - Version history and changes
 
 ## Architecture Overview
 
@@ -39,14 +48,14 @@ This Terraform module creates a comprehensive Azure Virtual WAN architecture wit
 
 | Name | Version |
 |------|---------|
-| terraform | >= 1.0 |
-| azurerm | ~> 3.0 |
+| terraform | >= 1.13.0 |
+| azurerm | ~> 4.38.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| azurerm | ~> 3.0 |
+| azurerm | ~> 4.38.1 |
 
 ## Inputs
 
