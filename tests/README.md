@@ -5,7 +5,7 @@ This directory contains tests for the Azure Virtual WAN Terraform module to ensu
 ## Test Structure
 
 ### `basic.tftest.hcl`
-Comprehensive test suite that validates:
+Test suite that validates:
 - Basic Virtual WAN and Virtual Hub creation
 - Custom configuration options
 - VPN Gateway functionality
@@ -44,36 +44,36 @@ terraform test -verbose
 The test suite covers the following scenarios:
 
 ### Core Functionality
-- ✅ Virtual WAN creation with default settings
-- ✅ Virtual Hub creation and association
-- ✅ Custom Virtual WAN and Hub configurations
-- ✅ Address prefix validation
-- ✅ SKU and type validation
+- Virtual WAN creation with default settings
+- Virtual Hub creation and association
+- Custom Virtual WAN and Hub configurations
+- Address prefix validation
+- SKU and type validation
 
 ### VPN Connectivity
-- ✅ Site-to-Site VPN Gateway creation
-- ✅ VPN Gateway scale unit configuration
-- ✅ VPN Gateway association with Virtual Hub
+- Site-to-Site VPN Gateway creation
+- VPN Gateway scale unit configuration
+- VPN Gateway association with Virtual Hub
 
 ### ExpressRoute Connectivity
-- ✅ ExpressRoute Gateway creation
-- ✅ ExpressRoute Gateway scale units
-- ✅ ExpressRoute Gateway association with Virtual Hub
+- ExpressRoute Gateway creation
+- ExpressRoute Gateway scale units
+- ExpressRoute Gateway association with Virtual Hub
 
 ### Point-to-Site VPN
-- ✅ P2S VPN Gateway creation
-- ✅ P2S VPN Gateway scale unit configuration
-- ✅ P2S VPN Gateway association with Virtual Hub
+- P2S VPN Gateway creation
+- P2S VPN Gateway scale unit configuration
+- P2S VPN Gateway association with Virtual Hub
 
 ### Network Security
-- ✅ Network Security Group creation
-- ✅ Security rule configuration
-- ✅ NSG rule validation
+- Network Security Group creation
+- Security rule configuration
+- NSG rule validation
 
 ### Routing
-- ✅ Route table creation
-- ✅ Custom route configuration
-- ✅ Route validation
+- Route table creation
+- Custom route configuration
+- Route validation
 
 ## Test Validation
 

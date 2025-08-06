@@ -1,6 +1,6 @@
 # Azure Virtual WAN Module - Resource Map
 
-This document provides a comprehensive overview of all Azure resources created by the `tfm-azure-vhub` Terraform module, their relationships, and dependencies.
+This document provides an overview of all Azure resources created by the `tfm-azure-vhub` Terraform module, their relationships, and dependencies.
 
 ## Resource Overview
 

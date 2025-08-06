@@ -1,6 +1,6 @@
 # Contributing to Azure Virtual WAN Terraform Module
 
-We love your input! We want to make contributing to this Azure Virtual WAN Terraform module as easy and transparent as possible, whether it's:
+We welcome contributions to this Azure Virtual WAN Terraform module. Whether you're:
 
 - Reporting a bug
 - Discussing the current state of the code
@@ -8,11 +8,13 @@ We love your input! We want to make contributing to this Azure Virtual WAN Terra
 - Proposing new features
 - Becoming a maintainer
 
-## We Develop with Github
-We use GitHub to host code, to track issues and feature requests, as well as accept pull requests.
+## Development Process
 
-## We Use [Github Flow](https://guides.github.com/introduction/flow/)
-Pull requests are the best way to propose changes to the codebase. We actively welcome your pull requests:
+We use GitHub to host code, track issues and feature requests, and accept pull requests.
+
+## Pull Request Process
+
+We follow the [GitHub Flow](https://guides.github.com/introduction/flow/) for contributions:
 
 1. Fork the repo and create your branch from `main`.
 2. If you've added code that should be tested, add tests.
@@ -21,8 +23,9 @@ Pull requests are the best way to propose changes to the codebase. We actively w
 5. Make sure your code lints.
 6. Issue that pull request!
 
-## We Use [Conventional Commits](https://www.conventionalcommits.org/)
-We use conventional commits for commit messages. This helps with automated changelog generation and semantic versioning.
+## Commit Messages
+
+We use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages to help with automated changelog generation and semantic versioning.
 
 ### Commit Message Format
 ```
@@ -43,25 +46,25 @@ We use conventional commits for commit messages. This helps with automated chang
 - `test`: Adding missing tests or correcting existing tests
 - `chore`: Changes to the build process or auxiliary tools
 
-## Any contributions you make will be under the MIT Software License
-In short, when you submit code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
+## License
 
-## Report bugs using Github's [issue tracker](https://github.com/your-repo/issues)
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/your-repo/issues/new); it's that easy!
+Any contributions you make will be under the MIT Software License. When you submit code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project.
 
-## Write bug reports with detail, background, and sample code
+## Bug Reports
 
-**Great Bug Reports** tend to have:
+Report bugs using GitHub's [issue tracker](https://github.com/your-repo/issues). Report a bug by [opening a new issue](https://github.com/your-repo/issues/new).
+
+### Bug Report Guidelines
+
+Good bug reports include:
 
 - A quick summary and/or background
-- Steps to reproduce
-  - Be specific!
-  - Give sample code if you can.
+- Steps to reproduce (be specific)
 - What you expected would happen
 - What actually happens
 - Notes (possibly including why you think this might be happening, or stuff you tried that didn't work)
 
-## Use a Consistent Coding Style
+## Coding Style
 
 * Use 2 spaces for indentation
 * Use meaningful variable names
@@ -69,7 +72,7 @@ We use GitHub issues to track public bugs. Report a bug by [opening a new issue]
 * Follow Terraform best practices
 * Use consistent naming conventions (lowercase with underscores)
 
-## Terraform Specific Guidelines
+## Terraform Guidelines
 
 ### Code Style
 - Use `terraform fmt` to format your code
@@ -96,7 +99,5 @@ We use GitHub issues to track public bugs. Report a bug by [opening a new issue]
 - Keep the changelog up to date
 
 ## License
-By contributing, you agree that your contributions will be licensed under its MIT License.
 
-## References
-This document was adapted from the open-source contribution guidelines for [Facebook's Draft](https://github.com/facebook/draft-js/blob/a9316a723f9e918afde44dea68b5f9f39b7d9b00/CONTRIBUTING.md). 
+By contributing, you agree that your contributions will be licensed under its MIT License. 

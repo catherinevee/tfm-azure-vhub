@@ -1,6 +1,6 @@
 # Azure Virtual WAN Terraform Module
 
-This Terraform module creates a comprehensive Azure Virtual WAN architecture with support for:
+This Terraform module creates an Azure Virtual WAN architecture with support for:
 
 - **Virtual WAN Hub**: Central hub for network connectivity
 - **Site-to-Site VPN connections**: Secure connections to on-premises networks
@@ -12,19 +12,19 @@ This Terraform module creates a comprehensive Azure Virtual WAN architecture wit
 
 ## Features
 
-- 🏗️ **Modular Design**: Reusable components for different deployment scenarios
-- 🔧 **Highly Configurable**: Extensive customization options for all resources
-- 🛡️ **Security Focused**: Built-in security controls and best practices
-- 📊 **Comprehensive Outputs**: Detailed outputs for integration with other modules
-- 🏷️ **Tagging Support**: Consistent resource tagging for cost management
-- ✅ **Validation**: Input validation to prevent configuration errors
-- 📋 **Resource Map**: Comprehensive documentation of all created resources
+- **Modular Design**: Reusable components for different deployment scenarios
+- **Configurable**: Extensive customization options for all resources
+- **Security Focused**: Built-in security controls and best practices
+- **Comprehensive Outputs**: Detailed outputs for integration with other modules
+- **Tagging Support**: Consistent resource tagging for cost management
+- **Validation**: Input validation to prevent configuration errors
+- **Resource Map**: Documentation of all created resources
 
 ## Documentation
 
-- [**Resource Map**](RESOURCE_MAP.md) - Detailed overview of all Azure resources, their relationships, and dependencies
+- [**Resource Map**](RESOURCE_MAP.md) - Overview of all Azure resources, relationships, and dependencies
 - [**Examples**](examples/) - Working examples for different deployment scenarios
-- [**Tests**](tests/) - Comprehensive test suite for module validation
+- [**Tests**](tests/) - Test suite for module validation
 - [**Contributing**](CONTRIBUTING.md) - Guidelines for contributing to the module
 - [**Changelog**](CHANGELOG.md) - Version history and changes
 
@@ -515,10 +515,10 @@ module "virtual_wan" {
 ## Best Practices
 
 ### Security
-- Always enable internet security for VPN connections when possible
+- Enable internet security for VPN connections when possible
 - Use strong authentication methods for Point-to-Site VPN
 - Implement Network Security Groups for additional security controls
-- Use Azure Key Vault to store sensitive information like shared keys
+- Store sensitive information like shared keys in Azure Key Vault
 
 ### Performance
 - Choose appropriate scale units based on expected traffic
